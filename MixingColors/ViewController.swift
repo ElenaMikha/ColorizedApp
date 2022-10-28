@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-// MARK: - IB Outlets
+    // MARK: - IB Outlets
     @IBOutlet var colorView: UIView!
-
+    
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
@@ -32,23 +32,24 @@ class ViewController: UIViewController {
         setupGreenSlider()
         setupBlueSlider()
         
+        setupRedlabelValue()
+        setupGreenlabelValue()
+        setupBluelabelValue()
+        
         colorView.layer.cornerRadius = 15
         
         redLabel.textColor = .red
         greenLabel.textColor = .green
         blueLabel.textColor = .blue
         
-        redLabelValue.text = redSlider.value.formatted()
-        greenLabelValue.text = greenSlider.value.formatted()
-        blueLabelValue.text = blueSlider.value.formatted()
-
+        
     }
     private func viewBackgroundcolor() {
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
-
-
-// MARK: - IB Actions
+    
+    
+    // MARK: - IB Actions
     
     @IBAction func redSliderAction() {
         redLabelValue.text =  String(format: "%.02f", redSlider.value)
@@ -66,7 +67,7 @@ class ViewController: UIViewController {
         viewBackgroundcolor()
     }
     
-// MARK: - Private Methods
+    // MARK: - Private Methods
     private func setupRedSlider() {
         redSlider.minimumTrackTintColor = .red
         redSlider.value = 0
@@ -85,6 +86,18 @@ class ViewController: UIViewController {
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 1
         blueSlider.value = 0
+    }
+    private func setupRedlabelValue() {
+        redLabelValue.textColor = .red
+        redLabelValue.text = redSlider.value.formatted()
+    }
+    private func setupGreenlabelValue() {
+        greenLabelValue.textColor = .green
+        greenLabelValue.text = greenSlider.value.formatted()
+    }
+    private func setupBluelabelValue() {
+        blueLabelValue.textColor = .blue
+        blueLabelValue.text = blueSlider.value.formatted()
     }
     
 }
