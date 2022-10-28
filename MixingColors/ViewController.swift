@@ -32,14 +32,13 @@ class ViewController: UIViewController {
         setupGreenSlider()
         setupBlueSlider()
         
-        
         colorView.layer.cornerRadius = 15
         
         redLabel.textColor = .red
         greenLabel.textColor = .green
         blueLabel.textColor = .blue
         
-        redLabelValue.text = redSlider.value.rounded().formatted()
+        redLabelValue.text = redSlider.value.formatted()
         greenLabelValue.text = greenSlider.value.formatted()
         blueLabelValue.text = blueSlider.value.formatted()
 
@@ -52,15 +51,15 @@ class ViewController: UIViewController {
 // MARK: - IB Actions
     
     @IBAction func redSliderAction() {
-        redLabelValue.text = redSlider.value.formatted()
+        redLabelValue.text =  String(format: "%.02f", redSlider.value)
     }
     
     @IBAction func greenSliderAction() {
-        greenLabelValue.text = greenSlider.value.formatted()
+        greenLabelValue.text = String(format: "%.02f", greenSlider.value)
     }
     
     @IBAction func blueSliderAction() {
-        blueLabelValue.text = blueSlider.value.formatted()
+        blueLabelValue.text = String(format: "%.02f", blueSlider.value)
     }
     
     @IBAction func rgbColors() {
