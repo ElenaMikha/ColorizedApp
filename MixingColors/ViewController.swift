@@ -43,12 +43,7 @@ class ViewController: UIViewController {
         greenLabel.textColor = .green
         blueLabel.textColor = .blue
         
-        
     }
-    private func viewBackgroundcolor() {
-        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
-    }
-    
     
     // MARK: - IB Actions
     
@@ -101,6 +96,8 @@ class ViewController: UIViewController {
         blueLabelValue.textColor = .blue
         blueLabelValue.text = blueSlider.value.formatted()
     }
-    
+    private func viewBackgroundcolor() {
+        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+    }
 }
 
