@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - IB Outlets
+    
     @IBOutlet var colorView: UIView!
     
     @IBOutlet var redLabel: UILabel!
@@ -68,6 +69,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Private Methods
+    
     private func setupRedSlider() {
         redSlider.minimumTrackTintColor = .red
         redSlider.value = 0
