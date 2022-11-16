@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingColorViewController: UIViewController {
     
     // MARK: - IB Outlets
     
@@ -21,17 +21,32 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    var red: CIColor!
+    var green: CIColor!
+    var blue: CIColor!
+    
+    
+    var colors: UIColor!
+    
+    var delegate: SettingColorViewControllerDelegate!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        colorView.backgroundColor = colors
         colorView.layer.cornerRadius = 15
         setColor()
         setValue(for: redLabelValue, greenLabelValue, blueLabelValue)
     }
     
     // MARK: - IB Actions
-        
+    
+    
+    @IBAction func doneButtonPressed() {
+        dismiss(animated: true)
+//        delegate.setScreenColor(with: UIColor()
+    }
+    
     @IBAction func rgbSliderAction(_ sender: UISlider) {
         setColor()
         switch sender {
@@ -43,6 +58,8 @@ class ViewController: UIViewController {
             blueLabelValue.text = string(from: blueSlider)
         }
     }
+    
+    
     
     // MARK: - Private Methods
     

@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		268A4F05290B1B3300C456F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A4F04290B1B3300C456F7 /* AppDelegate.swift */; };
 		268A4F07290B1B3300C456F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A4F06290B1B3300C456F7 /* SceneDelegate.swift */; };
-		268A4F09290B1B3300C456F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A4F08290B1B3300C456F7 /* ViewController.swift */; };
+		268A4F09290B1B3300C456F7 /* SettingColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268A4F08290B1B3300C456F7 /* SettingColorViewController.swift */; };
 		268A4F0C290B1B3300C456F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268A4F0A290B1B3300C456F7 /* Main.storyboard */; };
 		268A4F0E290B1B3400C456F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 268A4F0D290B1B3400C456F7 /* Assets.xcassets */; };
 		268A4F11290B1B3400C456F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268A4F0F290B1B3400C456F7 /* LaunchScreen.storyboard */; };
+		26D4FF7029252257007FF54F /* ScreenСolorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4FF6F29252257007FF54F /* ScreenСolorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		268A4F01290B1B3300C456F7 /* MixingColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MixingColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		268A4F01290B1B3300C456F7 /* ColorizedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorizedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		268A4F04290B1B3300C456F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		268A4F06290B1B3300C456F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		268A4F08290B1B3300C456F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		268A4F08290B1B3300C456F7 /* SettingColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingColorViewController.swift; sourceTree = "<group>"; };
 		268A4F0B290B1B3300C456F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		268A4F0D290B1B3400C456F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		268A4F10290B1B3400C456F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		268A4F12290B1B3400C456F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26D4FF6F29252257007FF54F /* ScreenСolorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScreenСolorViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +42,7 @@
 		268A4EF8290B1B3300C456F7 = {
 			isa = PBXGroup;
 			children = (
-				268A4F03290B1B3300C456F7 /* MixingColors */,
+				268A4F03290B1B3300C456F7 /* ColorizedApp */,
 				268A4F02290B1B3300C456F7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +50,64 @@
 		268A4F02290B1B3300C456F7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				268A4F01290B1B3300C456F7 /* MixingColors.app */,
+				268A4F01290B1B3300C456F7 /* ColorizedApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		268A4F03290B1B3300C456F7 /* MixingColors */ = {
+		268A4F03290B1B3300C456F7 /* ColorizedApp */ = {
+			isa = PBXGroup;
+			children = (
+				26D4FF71292522C0007FF54F /* App */,
+				26D4FF72292522E8007FF54F /* ViewControllers */,
+				26D4FF7329252322007FF54F /* Storyboards */,
+				26D4FF7429252354007FF54F /* Resources */,
+			);
+			path = ColorizedApp;
+			sourceTree = "<group>";
+		};
+		26D4FF71292522C0007FF54F /* App */ = {
 			isa = PBXGroup;
 			children = (
 				268A4F04290B1B3300C456F7 /* AppDelegate.swift */,
 				268A4F06290B1B3300C456F7 /* SceneDelegate.swift */,
-				268A4F08290B1B3300C456F7 /* ViewController.swift */,
-				268A4F0A290B1B3300C456F7 /* Main.storyboard */,
-				268A4F0D290B1B3400C456F7 /* Assets.xcassets */,
-				268A4F0F290B1B3400C456F7 /* LaunchScreen.storyboard */,
 				268A4F12290B1B3400C456F7 /* Info.plist */,
 			);
-			path = MixingColors;
+			path = App;
+			sourceTree = "<group>";
+		};
+		26D4FF72292522E8007FF54F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				26D4FF6F29252257007FF54F /* ScreenСolorViewController.swift */,
+				268A4F08290B1B3300C456F7 /* SettingColorViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		26D4FF7329252322007FF54F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				268A4F0A290B1B3300C456F7 /* Main.storyboard */,
+				268A4F0F290B1B3400C456F7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		26D4FF7429252354007FF54F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				268A4F0D290B1B3400C456F7 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		268A4F00290B1B3300C456F7 /* MixingColors */ = {
+		268A4F00290B1B3300C456F7 /* ColorizedApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 268A4F15290B1B3400C456F7 /* Build configuration list for PBXNativeTarget "MixingColors" */;
+			buildConfigurationList = 268A4F15290B1B3400C456F7 /* Build configuration list for PBXNativeTarget "ColorizedApp" */;
 			buildPhases = (
 				268A4EFD290B1B3300C456F7 /* Sources */,
 				268A4EFE290B1B3300C456F7 /* Frameworks */,
@@ -82,9 +117,9 @@
 			);
 			dependencies = (
 			);
-			name = MixingColors;
+			name = ColorizedApp;
 			productName = MixingColors;
-			productReference = 268A4F01290B1B3300C456F7 /* MixingColors.app */;
+			productReference = 268A4F01290B1B3300C456F7 /* ColorizedApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +137,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 268A4EFC290B1B3300C456F7 /* Build configuration list for PBXProject "MixingColors" */;
+			buildConfigurationList = 268A4EFC290B1B3300C456F7 /* Build configuration list for PBXProject "ColorizedApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +150,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				268A4F00290B1B3300C456F7 /* MixingColors */,
+				268A4F00290B1B3300C456F7 /* ColorizedApp */,
 			);
 		};
 /* End PBXProject section */
@@ -138,8 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				268A4F09290B1B3300C456F7 /* ViewController.swift in Sources */,
+				268A4F09290B1B3300C456F7 /* SettingColorViewController.swift in Sources */,
 				268A4F05290B1B3300C456F7 /* AppDelegate.swift in Sources */,
+				26D4FF7029252257007FF54F /* ScreenСolorViewController.swift in Sources */,
 				268A4F07290B1B3300C456F7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YTLT453A9Z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MixingColors/Info.plist;
+				INFOPLIST_FILE = ColorizedApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,7 +356,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YTLT453A9Z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MixingColors/Info.plist;
+				INFOPLIST_FILE = ColorizedApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -345,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		268A4EFC290B1B3300C456F7 /* Build configuration list for PBXProject "MixingColors" */ = {
+		268A4EFC290B1B3300C456F7 /* Build configuration list for PBXProject "ColorizedApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				268A4F13290B1B3400C456F7 /* Debug */,
@@ -354,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		268A4F15290B1B3400C456F7 /* Build configuration list for PBXNativeTarget "MixingColors" */ = {
+		268A4F15290B1B3400C456F7 /* Build configuration list for PBXNativeTarget "ColorizedApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				268A4F16290B1B3400C456F7 /* Debug */,
