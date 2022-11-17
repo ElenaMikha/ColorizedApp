@@ -33,7 +33,9 @@ class SettingColorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         colorView.backgroundColor = colors
+        
         colorView.layer.cornerRadius = 15
         setColor()
         setValue(for: redLabelValue, greenLabelValue, blueLabelValue)
