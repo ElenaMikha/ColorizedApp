@@ -21,13 +21,8 @@ class SettingColorViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
-    var red: CIColor!
-    var green: CIColor!
-    var blue: CIColor!
-    
     
     var colors: UIColor!
-    
     var delegate: SettingColorViewControllerDelegate!
     
     
@@ -39,6 +34,7 @@ class SettingColorViewController: UIViewController {
         colorView.layer.cornerRadius = 15
         setColor()
         setValue(for: redLabelValue, greenLabelValue, blueLabelValue)
+        setValue(for: redSlider, greenSlider, blueSlider)
     }
     
     // MARK: - IB Actions
@@ -46,7 +42,7 @@ class SettingColorViewController: UIViewController {
     
     @IBAction func doneButtonPressed() {
         dismiss(animated: true)
-//        delegate.setScreenColor(with: UIColor()
+        delegate.setScreenColor(with: colorView.backgroundColor ?? .white)
     }
     
     @IBAction func rgbSliderAction(_ sender: UISlider) {
@@ -72,6 +68,21 @@ class SettingColorViewController: UIViewController {
             blue: CGFloat(blueSlider.value), alpha: 1
         )
     }
+    
+    private func setValue(for colorSliders: UISlider...) {
+        let ciColor = CIColor(color: colors)
+        colorSliders.forEach { slider in
+            switch slider {
+            case redSlider:
+                redSlider.value = Float(ciColor.red)
+            case greenSlider:
+                greenSlider.value = Float(ciColor.green)
+            default:
+                blueSlider.value = Float(ciColor.blue)
+            }
+        }
+    }
+    
     
     private func setValue(for labels: UILabel...) {
         labels.forEach { label in
