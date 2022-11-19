@@ -69,19 +69,21 @@ class SettingColorViewController: UIViewController {
         )
     }
     
-    private func setValue(for colorSliders: UISlider...) {
-        let ciColor = CIColor(color: colors)
-        colorSliders.forEach { slider in
-            switch slider {
-            case redSlider:
-                redSlider.value = Float(ciColor.red)
-            case greenSlider:
-                greenSlider.value = Float(ciColor.green)
-            default:
-                blueSlider.value = Float(ciColor.blue)
-            }
-        }
-    }
+//    private func setValue(for colorSliders: UISlider...) {
+//        let ciColor = CIColor(color: colors)
+//        colorSliders.forEach { slider in
+//            switch slider {
+//            case redSlider:
+//                redSlider.value = Float(ciColor.red)
+//            case greenSlider:
+//                greenSlider.value = Float(ciColor.green)
+//            default:
+//                blueSlider.value = Float(ciColor.blue)
+//            }
+//        }
+//    }
+    
+    
     
     
     private func setValue(for labels: UILabel...) {
